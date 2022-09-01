@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Donny Benét</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="images/donny-top-left.jpg"
+        class="donny-topleft"
+        alt="Donny profile picture"
+      />
+      <h1 class="header-text">ABOUT DONNY</h1>
+    </div>
+
+    <div class="content">
+      <div class="menu">
+        <button onclick="menuCollapse()" id="menuButton">&#9776;</button>
+
+        <ul id="navbar">
+          <li>
+            <p><a href="index.html">Home</a></p>
+          </li>
+          <li>
+            <p><a href="about.html">About</a></p>
+          </li>
+          <li>
+            <p><a href="signup.html">Sign up</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="about-text">
+        <form id="formTest">
+          <label>First Name:</label>
+          <input id="firstname" type="text" />
+          <br />
+          <label>Last Name:</label>
+          <input id="lastname" type="text" />
+          <br />
+          <button id="jsonbtn" type="submit">
+            Click to convert input to JSON
+          </button>
+
+          <button onclick="download()">Download</button>
+
+          <p id="jsontext"></p>
+          <p id="output"></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        <a href="https://www.instagram.com/donnybenet"
+          ><img
+            src="images/instagram.png"
+            id="instagramlogo"
+            alt="Abba Instagram Page"
+        /></a>
+      </p>
+      <p>
+        <a href="mailto:eriksson.nf@gmail.com"
+          ><img src="images/Email.png" id="emaillogo" alt="email icon logo"
+        /></a>
+      </p>
+    </div>
+
+    <script src="js/javascript.js" async defer></script>
+  </body>
+</html>
