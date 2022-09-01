@@ -29,6 +29,9 @@ jsonBtn = document.querySelector("#jsonbtn");
 jsonText = document.querySelector("#jsontext");
 let output = document.querySelector("#output");
 const form = document.querySelector("#formTest");
+const welcomeMessageOutput = document.querySelector("#welcomeMessage");
+
+
 
 if(form)
 form.addEventListener("submit", saveUserInput);
@@ -45,17 +48,18 @@ function saveUserInput(event){
 
     localStorage.setItem("username", data.userName);
 
-    const demo = document.querySelector("#welcomeMessage");
-    demo.textContent = localStorage.getItem("username");
+    welcomeMessageOutput.textContent = localStorage.getItem("username");
 
-    let userNameTest = demo.textContent;
+    let userNameTest = welcomeMessageOutput.textContent;
 
     welcomeMessageOutput.textContent = `Välkommen ${userNameTest}!`;  
 
-    }
+    }else{
+        console.error("skärp DAJJ")
+        alert("Fyll i användarnamn & lösenord");
+    };
 }
 
-const welcomeMessageOutput = document.querySelector("#welcomeMessage");
 
 
 if(form)
@@ -65,8 +69,10 @@ const albumOutput = document.querySelector("#albumOutput");
 
 function fetchText(){
 
-fetch('text.json')
-.then(response => response.json()).then(data => {
+    fetch('text.json')
+        .then(response =>
+             response.json())
+             .then(data => {
 
         if(albumOutput) {
 
@@ -80,3 +86,7 @@ fetch('text.json')
     }
     })
 };
+
+function validateForm() {
+    
+}
