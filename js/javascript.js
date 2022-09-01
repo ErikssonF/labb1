@@ -3,7 +3,7 @@ function menuCollapse() {
 
     console.log(x.style.display);
 
-    if (!x.style.display || x.style.display === "") {
+    if (!x.style.display || x.style.display === "" || x.style.display == "none") {
       x.style.display = "block";
     } else {
       x.style.display = "none";
@@ -23,47 +23,45 @@ function menuCollapse() {
 
 window.addEventListener("resize", resizeFunction);
 
-
-userName = document.querySelector("#userNameInput")
-password = document.querySelector("#password")
-jsonBtn = document.querySelector("#jsonbtn")
-jsonText = document.querySelector("#jsontext")
+userName = document.querySelector("#userNameInput");
+password = document.querySelector("#password");
+jsonBtn = document.querySelector("#jsonbtn");
+jsonText = document.querySelector("#jsontext");
 let output = document.querySelector("#output");
 const form = document.querySelector("#formTest");
 
+if(form)
+form.addEventListener("submit", saveUserInput);
 
-form.addEventListener("submit", testFunction);
-
-function testFunction(event){
+function saveUserInput(event){
 
     event.preventDefault();
 
-    if(firstname || lastname){
-    
+    if(userName && password){
     data = {
-        "firstName":firstname.value,
-        "lastName":lastname.value
+        "userName":userName.value,
+        "lastName":password.value
     }
 
-    console.log(data);
-    console.log(JSON.stringify(data.firstName));
+    localStorage.setItem("username", data.userName);
 
-    localStorage.setItem("firstname", data.firstName);
+    const demo = document.querySelector("#welcomeMessage");
+    demo.textContent = localStorage.getItem("username");
 
-    const demo = document.querySelector("#demo");
+    let userNameTest = demo.textContent;
 
-    // Retrieve
-    demo.textContent = localStorage.getItem("firstname");
+    welcomeMessageOutput.textContent = `Välkommen ${userNameTest}!`;  
+
+    }
 }
-}
 
-
+const welcomeMessageOutput = document.querySelector("#welcomeMessage");
 
 
 if(form)
-form.addEventListener('submit', testFunction);
+form.addEventListener('submit', saveUserInput);
 
-const albumOutput = document.querySelector("#log");
+const albumOutput = document.querySelector("#albumOutput");
 
 function fetchText(){
 

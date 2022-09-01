@@ -1,3 +1,13 @@
+html{
+    margin:0px;
+    height: 100vh;
+}
+
+body{
+    margin:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .donny-topleft{
     width: 18%;
     border-radius: 50%;
@@ -5,6 +15,11 @@
     box-shadow: 0 0 10px black;
     margin: 25px;
     object-fit: cover;
+}
+
+.header{
+    background: linear-gradient(to top, #B9FFF8 0%, #FF9551 100%);
+    display:flex;
 }
 
 .header-text{
@@ -15,54 +30,8 @@
     font-family: "headerfont";
 }
 
-.header{
-    background: linear-gradient(to top, #B9FFF8 0%, #FF9551 100%);
-    display:flex;
-}
-
-.content{
-    background-color: #B9FFF8;
-    display:flex;
-    height: 100vh;
-    font-weight: bold;
-}
-
-.about-text{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: #B9FFF8;
-    width: 80vw;
-    text-align: center;
-    justify-content: center;
-    outline: none;
-    align-items: flex-start;
-}
-
-.content-images{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: #B9FFF8;
-    width: 82%;
-    outline: none;
-    justify-content: space-evenly;
-    align-content: flex-start;
-}
-
-.content img{
-    margin-top:20px;
-    height: 200px;
-    box-shadow: 0 0 10px black;
-    object-fit: cover;
-}
-
-html{
-    margin:0px;
-    height: 100vh;
-}
-
-body{
-    margin:0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#menuButton {
+    display: none;
 }
 
 .menu{
@@ -97,6 +66,46 @@ body{
 
 }
 
+.content{
+    background-color: #B9FFF8;
+    display:flex;
+    height: 100vh;
+    font-weight: bold;
+}
+
+.content-images{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: #B9FFF8;
+    width: 82%;
+    outline: none;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
+.content img{
+    margin-top:20px;
+    height: 200px;
+    box-shadow: 0 0 10px black;
+    object-fit: cover;
+}
+
+.about-text{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: #B9FFF8;
+    width: 80vw;
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    align-items: flex-start;
+}
+
+#albumOutput{
+    width: 50vw;
+}
+
+
 .footer{
     position: fixed;
     bottom: 0;
@@ -120,22 +129,7 @@ body{
     height: 35px;
 }
 
-#menuButton {
-    display: none;
-}
-
-#log{
-    width: 50vw;
-}
-
 @media screen and (max-width: 600px) {
-
-.header{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-
-}
 
 .donny-topleft{
     display: block;
@@ -147,6 +141,13 @@ body{
 
 }
 
+.header{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+
+}
+
 .header-text{
     text-align: center;
     width: 100%;
@@ -154,8 +155,45 @@ body{
 
 }
 
-#menuButton {
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #B9FFF8;
+    text-align: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+#navbar {
+    display:none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100px;
+    text-align: center;
+
+}
+
+#menuButton{
     display: block;
+    background-color: #FF9551;
+    text-decoration: none;
+    font-weight: bold;
+    height: 30px;
+    font-size: 20px;
+}
+
+#navbar a {
+    background-color: #FF9551;
+    margin-bottom:5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 3%;
 }
 
 .content{
@@ -187,7 +225,7 @@ body{
     object-fit: cover;
 }
 
-#log{
+#albumOutput{
     overflow-x:auto;
     white-space: pre-wrap;
 
@@ -201,48 +239,7 @@ body{
     outline: none;
     text-align:center;
 
-}
-
-
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #B9FFF8;
-    text-align: center;
-    justify-content: space-evenly;
-    height: auto;
-}
-
-#navbar {
-    display:none;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    width: 100px;
-    text-align: center;
-
-}
-
-#menuButton{
-    background-color: #FF9551;
-    text-decoration: none;
-    font-weight: bold;
-    height: 30px;
-    font-size: 20px;
-}
-
-#navbar a {
-    background-color: #FF9551;
-    margin-bottom:5px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 3%;
-}
+ }
 }
 
 @font-face {
