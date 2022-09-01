@@ -23,59 +23,62 @@ function menuCollapse() {
 
 window.addEventListener("resize", resizeFunction);
 
-// const data1 = document.querySelector("testname");
-// const data2 = document.querySelector("email");
-// const data3 = document.querySelector("message");
-// const btn1 = document.querySelector("btn");
-// const form = document.querySelector("formTest");
 
-
-//get references for text input and button fields
-firstname = document.getElementById("firstname")
-lastname = document.getElementById("lastname")
-jsonBtn = document.getElementById("jsonbtn")
-jsonText = document.getElementById("jsontext")
-let output = document.querySelector("output");
+userName = document.querySelector("#userNameInput")
+password = document.querySelector("#password")
+jsonBtn = document.querySelector("#jsonbtn")
+jsonText = document.querySelector("#jsontext")
+let output = document.querySelector("#output");
 const form = document.querySelector("#formTest");
 
+
+form.addEventListener("submit", testFunction);
 
 function testFunction(event){
 
     event.preventDefault();
 
-    if(firstname || lastname)
-    form.addEventListener("click", function(){
+    if(firstname || lastname){
     
     data = {
         "firstName":firstname.value,
         "lastName":lastname.value
     }
-    jsonText.innerText = JSON.stringify(data)
-    console.log(jsonText);
 
     console.log(data);
+    console.log(JSON.stringify(data.firstName));
 
-    download(data);
-})
+    localStorage.setItem("firstname", data.firstName);
+
+    const demo = document.querySelector("#demo");
+
+    // Retrieve
+    demo.textContent = localStorage.getItem("firstname");
 }
+}
+
+
+
 
 if(form)
 form.addEventListener('submit', testFunction);
 
-const elRecipeOutput = document.querySelector("#log");
+const albumOutput = document.querySelector("#log");
 
-async function fetchText(){
+function fetchText(){
 
 fetch('text.json')
 .then(response => response.json()).then(data => {
 
-        if(elRecipeOutput) {
+        if(albumOutput) {
 
         let albumText = data.artist 
         let releaseYear = data.about;
-        elRecipeOutput.textContent = `${albumText} ${releaseYear}`;  
+        
+        albumOutput.textContent = `${albumText} ${releaseYear}`;  
 
     } else {
       console.error('Something went wrong(fetchText)')
     }
-    })};
+    })
+};
