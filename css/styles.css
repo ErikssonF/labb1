@@ -129,6 +129,8 @@ body{
     height: 35px;
 }
 
+
+/* iPhone */
 @media screen and (max-width: 600px) {
 
 .donny-topleft{
@@ -241,6 +243,122 @@ body{
 
  }
 }
+
+/* Ipad Air */
+@media screen and (max-width: 820px) {
+
+    .donny-topleft{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        width: 40%;
+        border:none;
+    
+    }
+    
+    .header{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    
+    }
+    
+    .header-text{
+        text-align: center;
+        width: 100%;
+        letter-spacing: 5px;
+    
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #B9FFF8;
+        text-align: center;
+        justify-content: space-evenly;
+        height: auto;
+    }
+    
+    #navbar {
+        display:none;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100px;
+        text-align: center;
+    
+    }
+    
+    #menuButton{
+        display: block;
+        background-color: #FF9551;
+        text-decoration: none;
+        font-weight: bold;
+        height: 30px;
+        font-size: 20px;
+    }
+    
+    #navbar a {
+        background-color: #FF9551;
+        margin-bottom:5px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 3%;
+    }
+    
+    .content{
+        min-height:100vh;
+        display:flex;
+        flex-direction: column;
+        background-color: #B9FFF8;
+        align-items: center;
+        
+    }
+    
+    .content-images{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #B9FFF8;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    }
+    
+    .content img{
+        margin-top:33px;
+        height: 280px;
+        width: 280px;
+        box-shadow: 0 0 10px black;
+        object-fit: cover;
+    }
+    
+    #albumOutput{
+        overflow-x:auto;
+        white-space: pre-wrap;
+    
+    }
+    
+    .about-text{
+        display:flex;
+        flex-wrap: wrap;
+        background-color: #B9FFF8;
+        width: 100vw;
+        outline: none;
+        text-align:center;
+    
+     }
+    }
+    
 
 @font-face {
     font-family: headerfont;    
