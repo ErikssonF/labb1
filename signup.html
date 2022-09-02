@@ -38,10 +38,25 @@
       <div class="about-text">
         <form id="formTest">
           <label>Username:</label>
-          <input id="userNameInput" type="text" />
+          <input
+            id="userNameInput"
+            required
+            minlength="3"
+            placeholder="Enter your username"
+            pattern="^[A-Za-z][A-Za-z0-9_]{2,16}$"
+            title="Minst 3 tecken, inga mellanslag."
+            type="text"
+          />
           <br />
           <label>Password:</label>
-          <input id="password" type="text" />
+          <input
+            id="password"
+            required
+            minlength="3"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Minst en siffra, en stor bokstav, en liten bokstav och minst 8 tecken"
+            type="text"
+          />
           <br />
           <button id="jsonbtn" type="submit">Sign up</button>
           <p id="welcomeMessage"></p>

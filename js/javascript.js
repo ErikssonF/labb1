@@ -46,6 +46,7 @@ function saveUserInput(event){
         "lastName":password.value
     }
 
+
     localStorage.setItem("username", data.userName);
 
     welcomeMessageOutput.textContent = localStorage.getItem("username");
@@ -59,6 +60,7 @@ function saveUserInput(event){
         alert("Fyll i användarnamn & lösenord");
     };
 }
+
 
 
 
