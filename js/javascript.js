@@ -89,6 +89,28 @@ function fetchText(){
     })
 };
 
-function validateForm() {
-    
+
+function checkUser(){
+  
+    var test = 'test';
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+if(checkUser()){
+  console.log("funkar")
+
+  welcomeMessageOutput.textContent = localStorage.getItem("username");
+
+  let userNameTest = welcomeMessageOutput.textContent;
+  
+  welcomeMessageOutput.textContent = `Välkommen ${userNameTest}!`;  
+
+}else{
+  console.log("funkar inte")
 }
