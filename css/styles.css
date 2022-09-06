@@ -4,6 +4,8 @@ html{
 }
 
 body{
+    max-width: 1080px;
+    min-width: 400px;
     margin:0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -91,14 +93,20 @@ body{
 }
 
 .about-text{
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     background-color: #B9FFF8;
     width: 80vw;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     outline: none;
-    align-items: flex-start;
+    align-content: flex-start;
+    align-items: center;
+}
+
+#album-text{
+    width: 70vw;
+    margin-top: 40px;
 }
 
 #albumOutput{
@@ -133,6 +141,10 @@ body{
 /* iPhone */
 @media screen and (max-width: 600px) {
 
+html{
+    min-width: 500px;
+}
+
 .donny-topleft{
     display: block;
     margin-left: auto;
@@ -140,6 +152,12 @@ body{
     margin-top: 10px;
     width: 50%;
     border:none;
+
+}
+
+#album-text{
+    margin-top: 20px;
+    width: 80vw;
 
 }
 
@@ -257,6 +275,12 @@ body{
     
     }
     
+    #album-text{
+        margin-top: 50px;
+        width: 70vw;
+    
+    }
+
     .header{
         display:flex;
         flex-direction: column;
@@ -349,12 +373,14 @@ body{
     }
     
     .about-text{
-        display:flex;
-        flex-wrap: wrap;
-        background-color: #B9FFF8;
-        width: 100vw;
-        outline: none;
-        text-align:center;
+        display: flex;
+    flex-wrap: wrap;
+    background-color: #B9FFF8;
+    width: 100vw;
+    outline: none;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
     
      }
     }
