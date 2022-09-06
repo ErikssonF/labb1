@@ -117,7 +117,7 @@ body{
 .footer{
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 40px; 
     display:flex;
     padding:25px;
@@ -135,6 +135,12 @@ body{
     margin-left: 15px;
     width: 35px;
     height: 35px;
+}
+
+#signup-form{
+    display:flex;
+    flex-direction: column;
+    padding-top:50px;
 }
 
 
@@ -234,6 +240,12 @@ body{
 
 }
 
+#signup-form{
+    display:flex;
+    flex-direction: column;
+    padding-top:50px;
+}
+
 .content img{
     margin-top:33px;
     height: 150px;
@@ -277,6 +289,12 @@ body{
         width: 40%;
         border:none;
     
+    }
+
+    #signup-form{
+        display:flex;
+        flex-direction: column;
+        padding-top:50px;
     }
     
     .album-text{

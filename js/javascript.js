@@ -28,7 +28,7 @@ password = document.querySelector("#password");
 jsonBtn = document.querySelector("#jsonbtn");
 jsonText = document.querySelector("#jsontext");
 let output = document.querySelector("#output");
-const form = document.querySelector("#formTest");
+const form = document.querySelector("#signup-form");
 const welcomeMessageOutput = document.querySelector("#welcomeMessage");
 
 
