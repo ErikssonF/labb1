@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    max-width: 1200px;
+    max-width: 1280px;
     min-width: 500px;
     margin:0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,7 +40,7 @@ body{
     background-color: #B9FFF8;
     display: flex;
     height: 100vh;  
-    width: 21%;
+    width: 20vw;
     align-items: center;
     flex-direction: column; 
 }
@@ -70,16 +70,17 @@ body{
 
 .content{
     background-color: #B9FFF8;
-    display:flex;
+    display: flex;
     height: 100vh;
     font-weight: bold;
+    flex-wrap: wrap;
 }
 
 .content-images{
     display:flex;
     flex-wrap: wrap;
     background-color: #B9FFF8;
-    width: 82%;
+    width: 80vw;
     outline: none;
     justify-content: space-evenly;
     align-content: flex-start;
@@ -87,42 +88,57 @@ body{
 
 .content img{
     margin-top:20px;
-    height: 350px;
+    height: 200px;
     box-shadow: 0 0 10px black;
     object-fit: cover;
 }
 
 .about-text{
     display: flex;
-    flex-wrap: wrap;
     background-color: #B9FFF8;
     width: 80vw;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     outline: none;
-    align-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .album-text{
+    text-align: center;
     width: 50vw;
     margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
 }
 
 #albumOutput{
     width: 50vw;
-}
+    overflow-x:auto;
+    white-space: pre-wrap;}
 
 
 .footer{
-    position: fixed;
-    bottom: 0;
     width: 100vw;
-    height: 40px; 
-    display:flex;
-    padding:25px;
-    align-items: center;
+    height: 20px;
+    display: flex;
+    padding-bottom: 10px;
+    align-items: flex-end;
     background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
+}
+
+.footer-section{
+    height: 20px;
+    display: flex;
+    padding-bottom: 10px;
+    background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
+    align-items: flex-end;
+}
+
+.footer img{
+    box-shadow:none;
 }
 
 #instagramlogo{
@@ -140,144 +156,15 @@ body{
 #signup-form{
     display:flex;
     flex-direction: column;
-    padding-top:50px;
+    padding-top:20px;
 }
 
-
-/* iPhone */
-@media screen and (max-width: 600px) {
-
-body{
-    max-width: 1200px;
-    min-width: 500px;
-    margin:0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.donny-topleft{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 50%;
-    border:none;
-
-}
-
-.header{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-
-}
-
-.header-text{
-    text-align: center;
-    width: 100%;
-    letter-spacing: 5px;
-
-}
-
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #B9FFF8;
-    text-align: center;
-    justify-content: space-evenly;
-    height: auto;
-}
-
-#navbar {
-    display:none;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    width: 100px;
-    text-align: center;
-
-}
-
-#menuButton{
-    display: block;
-    background-color: #FF9551;
-    text-decoration: none;
-    font-weight: bold;
-    height: 30px;
-    font-size: 20px;
-}
-
-#navbar a {
-    background-color: #FF9551;
-    margin-bottom:5px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 3%;
-}
-
-.content{
-    min-height:100vh;
-    display:flex;
-    flex-direction: column;
-    background-color: #B9FFF8;
-    align-items: center;
-    
-}
-
-.content-images{
-    display:flex;
-    flex-direction: column;
-    background-color: #B9FFF8;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    align-content: center;
-    flex-wrap: wrap;
-
-}
-
-#signup-form{
-    display:flex;
-    flex-direction: column;
-    padding-top:50px;
-}
-
-.content img{
-    margin-top:33px;
-    height: 150px;
-    width: 150px;
-    box-shadow: 0 0 10px black;
-    object-fit: cover;
-}
-
-#albumOutput{
-    overflow-x:auto;
-    white-space: pre-wrap;
-
-}
-
-.about-text{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: #B9FFF8;
-    width: 100vw;
-    outline: none;
-    text-align:center;
-
- }
-}
-
-/* Ipad Air */
 @media screen and (max-width: 820px) {
 
     body{
         max-width: 1200px;
         min-width: 500px;
-
+        background-color: #B9FFF8;
         margin:0px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -295,10 +182,13 @@ body{
     #signup-form{
         display:flex;
         flex-direction: column;
-        padding-top:50px;
+        
     }
     
     .album-text{
+        text-align: center; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
         margin-top: 20px;
         width: 40vw;
     
@@ -406,7 +296,174 @@ body{
     align-items: center;
     
      }
-    }
+     
+.footer-section{
+    width: 100vw;
+    height: 20px;
+    display: flex;
+    padding-bottom: 10px;
+    background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
+    align-items: flex-end;
+}
+ 
+.footer img{
+    box-shadow:none;
+}
+
+
+/* iPhone */
+@media screen and (max-width: 600px) {
+
+body{
+    min-width: 375px;
+    min-height: 100vh;
+    margin:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.donny-topleft{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 50%;
+    border:none;
+
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+
+}
+
+.header-text{
+    text-align: center;
+    width: 100%;
+    letter-spacing: 5px;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #B9FFF8;
+    text-align: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+#navbar {
+    display:none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100px;
+    text-align: center;
+
+}
+
+#menuButton{
+    display: block;
+    background-color: #FF9551;
+    text-decoration: none;
+    font-weight: bold;
+    height: 30px;
+    font-size: 20px;
+}
+
+#navbar a {
+    background-color: #FF9551;
+    margin-bottom:5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 3%;
+}
+
+.content{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #B9FFF8;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+.content-images{
+    display:flex;
+    flex-direction: column;
+    background-color: #B9FFF8;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.album-text{
+    text-align: center;
+    width: 80vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+}
+
+#signup-form{
+    display:flex;
+    flex-direction: column;
+    padding-top:20px;
+}
+
+.content img{
+    margin-top:33px;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 0 10px black;
+    object-fit: cover;
+}
+
+#albumOutput{
+    overflow-x:auto;
+    white-space: pre-wrap;
+
+}
+
+#albumContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-text{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: #B9FFF8;
+    width: 100vw;
+    outline: none;
+    text-align:center;
+}
+
+.footer-section{
+    width: 100vw;
+    height: 20px;
+    display: flex;
+    padding-bottom: 10px;
+    background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
+    align-items: flex-end;
+}
+.footer-section img{
+    box-shadow: none;
+}
+
+}
+
     
 
 @font-face {
