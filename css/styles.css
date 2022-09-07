@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    max-width: 1280px;
+    max-width: 1920px;
     min-width: 500px;
     margin:0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,7 +124,6 @@ body{
     width: 100vw;
     height: 20px;
     display: flex;
-    padding-bottom: 10px;
     align-items: flex-end;
     background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
 }
@@ -132,8 +131,6 @@ body{
 .footer-section{
     height: 20px;
     display: flex;
-    padding-bottom: 10px;
-    background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
     align-items: flex-end;
 }
 
@@ -159,10 +156,12 @@ body{
     padding-top:20px;
 }
 
-@media screen and (max-width: 820px) {
+/* Ipad Air */
 
+@media screen and (max-width: 820px) {
+    
     body{
-        max-width: 1200px;
+        max-width: 1920px;
         min-width: 500px;
         background-color: #B9FFF8;
         margin:0px;
@@ -190,7 +189,7 @@ body{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
         margin-top: 20px;
-        width: 40vw;
+        width: 50vw;
     
     }
 
@@ -296,12 +295,16 @@ body{
     align-items: center;
     
      }
+
+     .footer{
+        position:fixed;
+        bottom:0;
+     }
      
-.footer-section{
+    .footer-section{
     width: 100vw;
     height: 20px;
     display: flex;
-    padding-bottom: 10px;
     background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
     align-items: flex-end;
 }
@@ -409,6 +412,7 @@ body{
 }
 
 .album-text{
+    margin-bottom:20px;
     text-align: center;
     width: 80vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -430,6 +434,7 @@ body{
 }
 
 #albumOutput{
+    width: 80vw;
     overflow-x:auto;
     white-space: pre-wrap;
 
@@ -454,7 +459,6 @@ body{
     width: 100vw;
     height: 20px;
     display: flex;
-    padding-bottom: 10px;
     background: linear-gradient(to top, #FF9551 0%,#B9FFF8 100%);
     align-items: flex-end;
 }
@@ -463,8 +467,7 @@ body{
 }
 
 }
-
-    
+}
 
 @font-face {
     font-family: headerfont;    
