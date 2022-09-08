@@ -4,9 +4,9 @@ html{
 }
 
 body{
+    width: 100vw;
     max-width: 1920px;
-    min-width: 500px;
-    margin:0px;
+    margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
